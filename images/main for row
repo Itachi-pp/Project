@@ -1,0 +1,22 @@
+#вставити в main
+
+for row in map:
+        for col in row:
+            if col == 'X':
+                soil = Soil(screen, settings)
+                soil.rect.x += x * soil.rect.width
+                soil.rect.y += y * soil.rect.height
+                soils.add(soil)
+                x += 1
+            elif col == 'Y':
+                stone_obj = Stone(screen , settings)
+                stone_obj.rect.x += x * stone_obj.rect.width
+                stone_obj.rect.y += y * stone_obj.rect.height
+                stones.add(stone_obj)
+                x += 1
+            elif col == 'W':
+                water = Water(screen , settings)
+                water.rect.x += x * water.rect.width
+                water.rect.y += y * water.rect.height
+                waters.add(water)
+                x += 1
